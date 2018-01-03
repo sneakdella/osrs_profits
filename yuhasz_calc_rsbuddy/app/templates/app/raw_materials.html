@@ -1,0 +1,106 @@
+﻿{% extends "app/layout.html" %}
+
+{% block title %}
+<title>Calculator</title>
+{% endblock %}
+
+{% block content %}
+
+<div class="jumbotron bg-black">
+    <div class="row">
+        <div class="col">
+            <h2> {{ title }}</h2>
+        </div>
+    </div>
+    <br />
+    <div class="row">
+       <div class="col-6" float="left">
+                {% for i in table_name %}
+                    <p>{{forloop.counter}}.) {{ i }}</p>
+                {% endfor %}
+       </div>
+        <div class="col" align="center">
+            <div class="row">
+                <div class="col-sm">
+                    <img src="../../static/app/pictures/raw_materials/Magic_logs_detail_animated.gif" width="81.54" height="68.46" alt="Magic log gif" />
+                </div>
+                <div class="col-sm">
+                    <img src="../../static/app/pictures/raw_materials/Runite_ore_detail.png" width="76.36" height="68" alt="Runite Ore"/>
+                </div>
+                <div class="col-sm">
+                    <img src="../../static/app/pictures/raw_materials/Ranarr_weed_grimy_detail.png" width="85" height="64.5" alt="Grimy Ranarr Weed"/>
+                </div>
+            </div>
+            <br />
+            <div class="row" align="center">
+                <div class="col-sm">
+                    <img src="../../static/app/pictures/skill_icons/Fletching-icon.png" alt="fletching icon"/>
+                </div>
+                <div class="col-sm">
+                    <img src="../../static/app/pictures/skill_icons/Smithing-icon.png" alt="smithing icon"/>
+                </div>
+                <div class="col-sm">
+                    <img src="../../static/app/pictures/skill_icons/Herblore-icon.png" alt="herblore icon" />
+                </div>
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-sm">
+                    <img src="../../static/app/pictures/raw_materials/Magic_shortbow_(u)_detail.png" width="54.46 height="88" alt="Magic Shortbow (u)" />
+                </div>
+                <div class="col-sm">
+                    <img src="../../static/app/pictures/raw_materials/Runite_bar_detail.png" width="94.5" height="64.5" alt="Runite Bar" />
+                </div>
+                <div class="col-sm">
+                    <img src="../../static/app/pictures/raw_materials/Ranarr_weed_detail.png" width="85" height="64.5" alt="Cleaned Ranarr"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Deploy All Tables That Are In The Deployall() Function Under views.py -->
+{% for i in deploy%}
+    <!-- Begins the container the table sits in -->
+    <div class="container">
+        <!-- If if/else loops to check the counter. Depending on the number, table_name list is called with the index of the forloopcounter. (but minus one because lists start at 0)-->
+        <!-- Indicies are based on how you setup the table_name list and how the tables are deployed. Make sure they are the same order -->
+        {% if forloop.counter == 1 %}
+            <h3> {{ table_name.0 }}</h3>
+        {% endif %}
+        {% if forloop.counter == 2 %}
+            <h3> {{ table_name.1 }}</h3>
+        {% endif %}
+        {% if forloop.counter == 3 %}
+            <h3> {{ table_name.2 }}</h3>
+        {% endif %}
+        {% if forloop.counter == 4 %}
+            <h3> {{ table_name.3 }}</h3>
+        {% endif %}
+        {% if forloop.counter == 5 %}
+            <h3> {{ table_name.4 }}</h3>
+        {% endif %}
+        {% if forloop.counter == 6 %}
+            <h3> {{ table_name.5 }}</h3>
+        {% endif %}
+        <table class="table table-hover table-bordered table-dark">
+        <tr>
+            <th scope="col">Start Item</th>
+            <th scope="col">Price</th>
+            <th scope="col">End Item</th>
+            <th scope="col">Price</th>
+            <th scope="col">Profit</th>
+        </tr>
+        {% for list_obj in i %}
+        <tr> {% for item in list_obj %}
+                <td>{{ item }}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </table>
+    </div>
+    {% endfor %}
+
+
+{% endblock %}

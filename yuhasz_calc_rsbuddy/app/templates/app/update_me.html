@@ -1,0 +1,31 @@
+﻿{% extends "app/layout.html" %}
+
+{% block title %}
+<title>Update Database</title>
+{% endblock %}
+
+{% block content %}
+
+<h2>{{ title }}</h2>
+
+<div class="container">
+    <p>DB Data here</p>
+    <table>
+    <tr>
+        <th>Item_ID</th>
+        <th>Item_Name</th>
+        <th>Item_Price</th>
+    </tr>
+    {% for item in qr %}
+    <tr> 
+        <td>{{ item.id }}</td>
+        <td>{{ item.item_name }}</td>
+        <td>{{ item.item_price }}</td>
+    </tr>
+    {% endfor %}
+</table>
+</div>
+<br />
+
+
+{% endblock %}

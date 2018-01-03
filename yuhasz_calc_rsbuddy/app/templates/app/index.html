@@ -1,0 +1,21 @@
+{% extends "app/layout.html" %}
+
+{% block content %}
+
+<div class="jumbotron">
+    <h1>Welcome</h1>
+</div>
+
+<div class="container">
+    <div class="jumbotron">
+        <p>Please visit the top links</p>
+        <p> Database last updated manually by the Administrator at {{ last_update }} - US EST (New York Time)</p>
+    </div>
+    <div class="jumbotron">
+    <h2>Admin</h2>
+        <a href="{% url 'update_me' %}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Update Database</a>
+    </div>
+</div>
+
+
+{% endblock %}
