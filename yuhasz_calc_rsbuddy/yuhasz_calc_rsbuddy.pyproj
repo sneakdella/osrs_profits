@@ -64,6 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\db_last_update.txt" />
+    <Content Include="app\readme.txt" />
     <Content Include="app\static\app\content\main.css" />
     <Content Include="app\static\app\pictures\raw_materials\Ranarr_weed_grimy_detail.png" />
     <Content Include="app\static\app\pictures\raw_materials\Magic_logs_detail_animated.gif" />
