@@ -64,7 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\db_last_update.txt" />
-    <Content Include="app\readme.txt" />
+    <Content Include="readme.txt" />
     <Content Include="app\static\app\content\main.css" />
     <Content Include="app\static\app\pictures\raw_materials\Ranarr_weed_grimy_detail.png" />
     <Content Include="app\static\app\pictures\raw_materials\Magic_logs_detail_animated.gif" />
@@ -108,11 +108,6 @@
     <Content Include="app\templates\app\layout.html" />
     <Content Include="app\templates\app\login.html" />
     <Content Include="app\templates\app\loginpartial.html" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="readme.html">
-      <SubType>WebBrowser</SubType>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <Interpreter Include="env\">
