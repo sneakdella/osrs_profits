@@ -7,6 +7,7 @@ from django.http import HttpRequest
 from django.template import RequestContext
 from datetime import datetime
 from app.calc_module import *
+from app.combinations_module import *
 
 from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
@@ -79,6 +80,21 @@ def by_combination(request):
             'title':'Combination Materials',
             'message':'Your application description page.',
             'year':datetime.now().year,
+        }
+    )
+
+def herblore_combo(request):
+    """Renders the combination items page."""
+    assert isinstance(request, HttpRequest)
+    deploy_herblore = deploy_herbs()
+    return render(
+        request,
+        'app/combinations_secondary/herblore.html',
+        {
+            'title':'Herblore',
+            'message':'Your application description page.',
+            'year':datetime.now().year,
+            'deploy_herbs': deploy_herblore,
         }
     )
 

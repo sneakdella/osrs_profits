@@ -22,6 +22,7 @@ urlpatterns = [
     url(r'^by_combination$', app.views.by_combination, name='by_combination'),
     url(r'^update_me$', app.views.update_me, name='update_me'),
     url(r'^about', app.views.about, name='about'),
+    url(r'^herblore$', app.views.herblore_combo, name='herblore_combo'),
     url(r'^login/$',
         django.contrib.auth.views.login,
         {
@@ -40,7 +41,7 @@ urlpatterns = [
             'next_page': '/',
         },
         name='logout'),
-
+    #Combination_secondary pages
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 

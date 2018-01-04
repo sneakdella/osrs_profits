@@ -8,6 +8,10 @@ body {
     color: #D6D7D9;
 }
 
+a:hover {
+    background-color: #D6D7D9;
+}
+
 /** Colors:
         darkestgrey - 151515
         ligtestgrey - 727D8E

@@ -1,0 +1,31 @@
+﻿{% extends "app/layout.html" %}
+
+{% block content %}
+<p> {{ test }}</p>
+
+
+
+<!-- Begins the container the table sits in -->
+<div class="container">
+    <table class="table table-hover table-bordered table-dark">
+    <tr>
+        <th scope="col">Finished Product</th>
+        <th scope="col">Base</th>
+        <th scope="col">Base Price</th>
+        <th scope="col">Secondary_A</th>
+        <th scope="col">Secondary_A Price</th>
+        <th scope="col">Total Cost To Produce</th>
+        <th scope="col">Finished Product Price</th>
+        <th scope="col">Total Profit</th>
+    </tr>
+    {% for rows in deploy_herbs%}
+            <tr>
+                {% for row in rows %}
+                    <td>{{ row }}</td>
+                {% endfor %}
+            </tr>
+    {% endfor %}
+</table>
+</div>
+
+{% endblock %}

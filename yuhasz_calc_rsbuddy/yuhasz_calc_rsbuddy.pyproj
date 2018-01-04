@@ -35,6 +35,9 @@
     <Compile Include="app\calc_module.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="app\combinations_module.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="app\forms.py" />
     <Compile Include="app\models.py" />
     <Compile Include="app\tests.py" />
@@ -60,10 +63,14 @@
     <Folder Include="app\static\app\scripts\" />
     <Folder Include="app\templates\" />
     <Folder Include="app\templates\app\" />
+    <Folder Include="app\templates\app\combinations_secondary\" />
     <Folder Include="yuhasz_calc_rsbuddy\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\db_last_update.txt" />
+    <Content Include="app\static\app\pictures\raw_materials\cooked_shark.png" />
+    <Content Include="app\static\app\pictures\raw_materials\crafting_spinning.png" />
+    <Content Include="app\templates\app\combinations_secondary\herblore.html" />
     <Content Include="readme.txt" />
     <Content Include="app\static\app\content\main.css" />
     <Content Include="app\static\app\pictures\raw_materials\Ranarr_weed_grimy_detail.png" />

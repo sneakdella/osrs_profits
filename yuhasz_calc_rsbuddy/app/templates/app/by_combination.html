@@ -10,29 +10,50 @@
 <div class="jumbotron bg-black">
     <div class="container text-center">
         <h2>{{ title }}</h2>
-        <p></p>
+    </div>
+    <br />
+    <div class="container text-center">
+      <div class="row">
+        <div class="col-sm">
+            <a class="nav-item nav-link" href="{% url 'herblore_combo' %}">
+                <img src="../../static/app/pictures/raw_materials/Ranarr_weed_grimy_detail.png" width="85" height="64.5" alt="Grimy Ranarr Weed"/>
+                <h4>Herblore</h4>
+            </a>
+        </div>
+        <div class="col-sm">
+            <a class="nav-item nav-link" href="#">
+                <img src="../../static/app/pictures/raw_materials/Runite_bar_detail.png" width="94.5" height="64.5" alt="Runite Bar"  />
+                <h3>Smithing</h3>
+                <p>Coming soon.</p>
+            </a>
+        </div>
+        <div class="col-sm">
+            <a class="nav-item nav-link" href="#">
+                <img src="../../static/app/pictures/raw_materials/Magic_shortbow_(u)_detail.png" width="54.46 height="88" alt="Magic Shortbow (u)" />
+                <h3>Fletching</h3>
+                <p>Coming sooon.</p>
+            </a>
+        </div>
+      </div>
+      <br />
+      <div class="row">
+          <div class="col-sm">
+              <a class="nav-item nav-link" href="#">
+                  <img src="../../static/app/pictures/raw_materials/crafting_spinning.png" width="57.3" height="80" alt="Spinning Wheel" />
+                  <h3>Crafting</h3>
+                  <p>Coming soon.</p>
+              </a>
+          </div>
+          <div class="col-sm">
+                  <a class="nav-item nav-link" href="#">
+                  <img src="../../static/app/pictures/raw_materials/cooked_shark.png" width="62.1" height="71" alt="Cooked_Shark" />
+                  <h3>Cooking</h3>
+                  <p>Coming soon.</p>
+              </a>
+          </div>
+      </div>
     </div>
 </div>
 
-<!----
-% for i in deploy %
-<div class="container">
-    <table class="table table-hover table-bordered table-dark">
-    <tr>
-        <th scope="col">Start Item</th>
-        <th scope="col">Price</th>
-        <th scope="col">End Item</th>
-        <th scope="col">Price</th>
-        <th scope="col">Profit</th>
-    </tr>
-    % for list_obj in i %
-    <tr> % for item in list_obj %
-            <td> item </td>
-        % endfor %
-    </tr>
-    % endfor %
-</table>
-</div>
-% endfor %
--->
+
 {% endblock %}
